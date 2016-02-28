@@ -21,6 +21,9 @@
 @-ms-viewport {
   width: device-width;
 }
+.responsive-invisibility() {
+  display: none !important;
+}
 
 
 // Visibility utilities
@@ -138,7 +141,7 @@
 }
 .hidden-sm {
   @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .responsive-invisibility();
+    display: none !important;
   }
 }
 .hidden-md {
