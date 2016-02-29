@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="less/bootstrap.less" type="text/css" rel="stylesheet/less"/>
     <link href="less/styles.less" type="text/css" rel="stylesheet/less"/>
@@ -12,9 +13,10 @@
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/angular.js" type="text/javascript"></script>
     <script src="js/controller.js" type="text/javascript"></script>
+    <script src="js/angular-route.js" type="text/javascript"></script>
     
 </head>
-<body>
+<body ng-app="askMeApp">
 <nav class="navbar navbar-default">
   <div class="col-md-12">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,235 +30,8 @@
     </div>
   </div>
 </nav>
-<div class="main-container">
-      <div class="hidden-xs hidden-md col-md-3">
-        <div id="sidebar">
-            <h3>CART</h3>
-            <div id="cart">
-                <span class="empty">No items in cart.</span>       
-            </div>
-            
-            <h3>CATEGORIES</h3>
-            <div class="checklist categories">
-                <ul>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>New Arivals</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Accesories</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Bags</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Dressed</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Jackets</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>jewelry</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Shoes</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Shirts</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>Sweaters</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>T-shirts</a></li>
-                </ul>
-            </div>
-            
-            <h3>COLORS</h3>
-            <div class="checklist colors">
-                <ul>
-                    <li><a href="#"><span></span>Beige</a></li>
-                    <li><a href="#"><span style="background:#222"></span>Black</a></li>
-                    <li><a href="#"><span style="background:#6e8cd5"></span>Blue</a></li>
-                    <li><a href="#"><span style="background:#f56060"></span>Brown</a></li>
-                    <li><a href="#"><span style="background:#44c28d"></span>Green</a></li>
-                    <li><a href="#"><span style="background:#999"></span>Grey</a></li>
-                    <li><a href="#"><span style="background:#f79858"></span>Orange</a></li>
-                    <li><a href="#"><span style="background:#b27ef8"></span>Purple</a></li>
-                    <li><a href="#"><span style="background:#f56060"></span>Red</a></li>
-                    <li><a href="#"><span style="background:#fff;border: 1px solid #e8e9eb;width:13px;height:13px;"></span>White</a></li>
-                </ul>        
-            </div>
-            
-            <h3>SIZES</h3>
-            <div class="checklist sizes">
-                <ul>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>XS</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>S</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>M</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>L</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>XL</a></li>
-                    <li><a href="#"><span><span class="x"></span><span class="y"></span></span>XXL</a></li>
-                </ul>        
-            </div>
-            
-             
-        </div>  
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-9">
-            <div id="grid-selector">
-               Showing 1-9 of 48 results 
-            </div>
-            <div class="grid">
-                <div class="col-xs-12 col-sm-6 col-md-4" style="z-index: 1;">
-                <div class="make3D" style="transition: 100ms ease-out;">
-                    <div class="product-front" style="display: block;">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt="">
-                        <div class="image_overlay"></div>
-                        <div class="add_to_cart">Add to cart</div>
-                        <div class="view_gallery">View gallery</div>                
-                        <div class="stats">         
-                            <div class="stats-container">
-                                <span class="product_price">$39</span>
-                                <span class="product_name">FLUTED HEM DRESS</span>    
-                                <p>Summer dress</p>                                            
-                                
-                                <div class="product-options"  style="display: none;">
-                                <strong>SIZES</strong>
-                                <span>XS, S, M, L, XL, XXL</span>
-                                <strong>COLORS</strong>
-                                <div class="colors">
-                                    <div class="c-blue"><span></span></div>
-                                    <div class="c-red"><span></span></div>
-                                    <div class="c-white"><span></span></div>
-                                    <div class="c-green"><span></span></div>
-                                </div>
-                            </div>                       
-                            </div>                         
-                        </div>
-                    </div>
-                    
-                    <div class="product-back" style="display: none;">
-                        <div class="shadow" style="opacity: 1; display: none;"></div>
-                        <div class="carousel">
-                            <ul class="carousel-container" rel="0" style="width: 945px; left: 0px; transition: 300ms ease-out;">
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg" alt=""></li>
-                            </ul>
-                            <div class="arrows-perspective">
-                                <div class="carouselPrev">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                                <div class="carouselNext">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-back">
-                            <div class="cy"></div>
-                            <div class="cx"></div>
-                        </div>
-                    </div>    
-                </div>  
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 col-md-4" style="z-index: 1;">
-                <div class="make3D" style="transition: 100ms ease-out;">
-                    <div class="product-front" style="display: block;">
-                        <div class="shadow" style="display: none; opacity: 0;"></div>
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt="">
-                        <div class="image_overlay"></div>
-                        <div class="add_to_cart">Add to cart</div>
-                        <div class="view_gallery">View gallery</div>                
-                        <div class="stats">         
-                            <div class="stats-container">
-                                <span class="product_price">$39</span>
-                                <span class="product_name">FLUTED HEM DRESS</span>    
-                                <p>Summer dress</p>                                            
-                                
-                                <div class="product-options"  style="display: none;">
-                                <strong>SIZES</strong>
-                                <span>XS, S, M, L, XL, XXL</span>
-                                <strong>COLORS</strong>
-                                <div class="colors">
-                                    <div class="c-blue"><span></span></div>
-                                    <div class="c-red"><span></span></div>
-                                    <div class="c-white"><span></span></div>
-                                    <div class="c-green"><span></span></div>
-                                </div>
-                            </div>                       
-                            </div>                         
-                        </div>
-                    </div>
-                    
-                    <div class="product-back" style="display: none;">
-                        <div class="shadow" style="opacity: 1; display: none;"></div>
-                        <div class="carousel">
-                            <ul class="carousel-container" rel="0" style="width: 945px; left: 0px; transition: 300ms ease-out;">
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg" alt=""></li>
-                            </ul>
-                            <div class="arrows-perspective">
-                                <div class="carouselPrev">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                                <div class="carouselNext">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-back">
-                            <div class="cy"></div>
-                            <div class="cx"></div>
-                        </div>
-                    </div>    
-                </div>  
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 " style="z-index: 1;">
-                <div class="make3D" style="transition: 100ms ease-out;">
-                    <div class="product-front" style="display: block;">
-                        <div class="shadow" style="display: none; opacity: 0;"></div>
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt="">
-                        <div class="image_overlay"></div>
-                        <div class="add_to_cart">Add to cart</div>
-                        <div class="view_gallery">View gallery</div>                
-                        <div class="stats">         
-                            <div class="stats-container">
-                                <span class="product_price">$39</span>
-                                <span class="product_name">FLUTED HEM DRESS</span>    
-                                <p>Summer dress</p>                                            
-                                
-                                <div class="product-options"  style="display: none;">
-                                <strong>SIZES</strong>
-                                <span>XS, S, M, L, XL, XXL</span>
-                                <strong>COLORS</strong>
-                                <div class="colors">
-                                    <div class="c-blue"><span></span></div>
-                                    <div class="c-red"><span></span></div>
-                                    <div class="c-white"><span></span></div>
-                                    <div class="c-green"><span></span></div>
-                                </div>
-                            </div>                       
-                            </div>                         
-                        </div>
-                    </div>
-                    
-                    <div class="product-back" style="display: none;">
-                        <div class="shadow" style="opacity: 1; display: none;"></div>
-                        <div class="carousel">
-                            <ul class="carousel-container" rel="0" style="width: 945px; left: 0px; transition: 300ms ease-out;">
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2.jpg" alt=""></li>
-                                <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg" alt=""></li>
-                            </ul>
-                            <div class="arrows-perspective">
-                                <div class="carouselPrev">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                                <div class="carouselNext">
-                                    <div class="y"></div>
-                                    <div class="x"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-back">
-                            <div class="cy"></div>
-                            <div class="cx"></div>
-                        </div>
-                    </div>    
-                </div>  
-            </div>
-            </div>
-      </div>
-
+<div class="main-container" ng-view>
+      
   </div>
 </body>
 </html>
